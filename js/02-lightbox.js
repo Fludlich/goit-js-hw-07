@@ -14,18 +14,8 @@ const makeGalery = galleryItems.map(({original, description, preview}) =>{
 
 gallery.innerHTML=makeGalery
 
-gallery.addEventListener('click', clickImage)
-
-function clickImage(event){
-    event.preventDefault()
-    if(event.target===event.currentTarget){
-
-return
-    }
     const lightbox = new SimpleLightbox('.gallery a', {
         captionsData:'alt',
         captionsDelay: 250
     })
-
-}
 
